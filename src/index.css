@@ -1,0 +1,145 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  scroll-behavior: smooth;
+  outline: none;
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.navBar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+.navLogo {
+  height: 50px;
+}
+
+.navLogo > img {
+  object-fit: cover;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links > ul {
+  list-style: none;
+  display: flex;
+}
+
+.links > ul > .navigation {
+  text-decoration: none;
+  margin: 0 25px;
+  font-size: 16px;
+  color: #333333;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.links > ul > .navigation:hover {
+  color: coral;
+}
+
+.loginBtn {
+  width: 100px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #F4CE14;
+  color: #495E57;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 25px;
+}
+
+.loginBtn:hover {
+  background-color: #495E57;
+  color: #F4CE14;
+  transition: all 0.5s;
+}
+
+.signoutLink {
+  padding: 10px 15px;
+  background-color: #333333;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.signoutLink:hover {
+  color: #F4CE14;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #333333;
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .links > ul {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .navBar {
+    position: relative;
+  }
+
+  .links.active {
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    padding-bottom: 2rem;
+  }
+
+  .links.active > ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links.active > ul > .navigation {
+    margin: 15px auto;
+  }
+
+  .loginBtn {
+    margin-top: 25px;
+  }
+}
